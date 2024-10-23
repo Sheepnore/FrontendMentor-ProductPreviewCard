@@ -2,11 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
 html{
   background-color: hsl(30, 38%, 92%);
 }
-
 .card-container{
   background-color: #fff;
   max-width: 40rem;
@@ -16,57 +14,45 @@ html{
 
   margin-top: 10rem;
   margin-inline: auto;
-
   /* The image is bigger than the container. Adding `overflow: hidden` ensures that any part of image extending outside the container is clipped. */
   overflow: hidden;
 
   /* Because the extending part of image is now clipped, CSS can apply `border-radius` correctly */
   border-radius: 24px;
-
 }
-
 img{
   /* ensuring that the image cannot be wider than its parent container (in this case, the grid column). */
-  width: 100%;
-  min-height: auto;
+  max-width: 100%;
+  height: auto;
 
   /* making sure the image fill out the entire space */
   display: block;
-
 }
-
 .productDescription-section{
   margin: 1.5rem;
 }
-
 .productDescription-section *{
   margin-bottom: 1rem;
 }
-
 .textAbove{
   font-family: 'Courier New', Courier, monospace;
   color: rgb(61, 61, 61);
   font-size: 1.5rem;
 }
-
 .productName{
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 2rem;
   font-weight: bolder;
 }
-
 .description{
   color: rgb(112, 112, 112);
 }
-
 .price{
   margin-top: .5rem;
 }
-
 .discounted, .original{
   display: inline;
 }
-
 .discounted{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2rem;
@@ -74,12 +60,10 @@ img{
   margin-right: 1.5rem;
   color: rgb(28, 109, 28);
 }
-
 .original{
   text-decoration: line-through;
   color: gray;
 }
-
 .addToCart{
   box-sizing: border-box;
   border: none;
@@ -97,19 +81,27 @@ img{
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
   transition: 300ms;
 }
-
 .addToCart:hover{
   transform: scale(1.05);
   background-color: hsl(158, 36%, 20%);
   transition: 300ms;
 }
-
 .addToCart svg{
   margin: 0;
   margin-right: .8rem;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .card-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem 3rem;
+  }
+  img{
+    height: 100%;
+  }
 }
 

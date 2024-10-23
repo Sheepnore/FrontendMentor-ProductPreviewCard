@@ -14,12 +14,10 @@
 
   <div class="card-container">
     <div class="img-section">
-      <img 
-      srcset="images/image-product-mobile.jpg 375w, images/image-product-desktop.jpg 1440w"
-      sizes="(max-width: 375px) 375px, 100vw" 
-      src="images/image-product-mobile.jpg" 
-      alt="product" 
-      >
+      <picture>
+        <source media="(min-width: 600px)" srcset="images/image-product-desktop.jpg">
+        <img src="images/image-product-mobile.jpg" alt="product">
+      </picture>
     </div>
 
     <div class="productDescription-section">
