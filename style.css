@@ -14,14 +14,14 @@ html{
 
   margin-top: 10rem;
   margin-inline: auto;
-  /* The image is bigger than the container. Adding `overflow: hidden` ensures that any part of image extending outside the container is clipped. */
+  /*  Adding `overflow: hidden` ensures that any part of image extending outside the container is clipped. */
   overflow: hidden;
 
   /* Because the extending part of image is now clipped, CSS can apply `border-radius` correctly */
   border-radius: 24px;
 }
 img{
-  /* ensuring that the image cannot be wider than its parent container (in this case, the grid column). */
+  /* The image is bigger than the container. This ensures that the image cannot be wider than its parent container (in this case, the grid column). */
   max-width: 100%;
   height: auto;
 
